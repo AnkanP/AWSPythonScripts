@@ -1,0 +1,1 @@
+vacuum demo.iceberg_table
