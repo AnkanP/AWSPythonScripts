@@ -1,4 +1,4 @@
-CREATE EXTERNAL TABLE `demo.persons-incremental`(
+CREATE EXTERNAL TABLE `raw.persons-incremental`(
   `op` string, 
   `commitdate` date, 
   `committimestamp` timestamp, 

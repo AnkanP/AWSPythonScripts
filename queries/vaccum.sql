@@ -1,1 +1,1 @@
-vacuum demo.iceberg_table
+vacuum rawstd.iceberg_table

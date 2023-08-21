@@ -1,3 +1,3 @@
-insert into "demo"."iceberg_table" 
+insert into "rawstd"."iceberg_table" 
 select op,"commitdate","committimestamp","personid","lastname","firstname","address","city", "commitdate" 
-from "demo"."persons-fullload"
+from "raw"."persons-fullload"

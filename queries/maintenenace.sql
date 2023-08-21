@@ -1,11 +1,11 @@
 #show partitions:
-SELECT * FROM "demo"."iceberg_table$partitions" 
+SELECT * FROM "rawstd"."iceberg_table$partitions" 
 
 #show snapshots
-SELECT * FROM "demo"."iceberg_table$snapshots" 
+SELECT * FROM "rawstd"."iceberg_table$snapshots" 
 
 #show history
-SELECT * FROM "demo"."iceberg_table$history"
+SELECT * FROM "rawstd"."iceberg_table$history"
 
 #time travel queries
 
@@ -14,11 +14,11 @@ SELECT * FROM "demo"."iceberg_table$history"
 #version travel queries
 
 #vaccum
-ALTER TABLE iceberg_table SET TBLPROPERTIES (
+ALTER TABLE rawstd.iceberg_table SET TBLPROPERTIES (
   'vacuum_max_snapshot_age_seconds'='259200'
 )
 
-ALTER TABLE demo.iceberg_table SET TBLPROPERTIES (
+ALTER TABLE rawstd.iceberg_table SET TBLPROPERTIES (
   'vacuum_max_snapshot_age_seconds'='1',
   'vacuum_min_snapshots_to_keep'='2'
 )

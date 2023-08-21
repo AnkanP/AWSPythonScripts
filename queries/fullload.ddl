@@ -1,5 +1,5 @@
 
-CREATE EXTERNAL TABLE `demo.persons-fullload`(
+CREATE EXTERNAL TABLE `raw.persons-fullload`(
   `op` string, 
   `commitdate` date, 
   `committimestamp` timestamp, 

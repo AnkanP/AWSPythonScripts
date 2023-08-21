@@ -1,4 +1,4 @@
-CREATE TABLE demo.iceberg_table (
+CREATE TABLE rawstd.iceberg_table (
  op string, 
   commitdate date, 
   committimestamp timestamp, 

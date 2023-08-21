@@ -4,10 +4,10 @@ USING (
     FROM "raw"."persons-incremental" t1
     JOIN (SELECT "personid" "id", max("committimestamp") "stc" 
         FROM "raw"."persons-incremental" 
-            WHERE partition_date ='2023-08-19'
+            WHERE partition_date ='<REPLACEDATE>'
                 GROUP BY "personid") t2
     ON t1."personid" = t2."id" AND t1."committimestamp" = t2."stc"
-    WHERE t1.partition_date ='2023-08-19') s
+    WHERE t1.partition_date ='<REPLACEDATE>') s
 ON t."personid" = s."personid"
 WHEN MATCHED AND s.op = '"D"' THEN DELETE
 WHEN MATCHED THEN
